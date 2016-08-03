@@ -1,0 +1,388 @@
+body,ul,li,span,p,h1,h2,h3,h4,h5,h6{
+	margin: 0;
+	padding: 0;
+}
+ul,li{
+	list-style: none;
+}
+.clear{
+	clear: both;
+}
+html{
+	width: 100%;
+	height: 100%;
+	font-size: 16px;
+	font-family:Microsoft YaHei, Helvetica;
+
+}
+*{
+	box-sizing:border-box;
+}
+a{
+	text-decoration: none;
+}
+
+body{
+	width: 100%;
+	min-height: 100%;
+	background: url(../img/game_bg.png) no-repeat center;
+	background-size: cover;
+}
+
+
+
+/*index*/
+.index_container,.ti_container,.score_container,.pay_container,.rightAnswer_container,.ready_container{
+	width:100%;
+	min-height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.index_container .E_dong{
+	width:7.75rem;
+	height: 1.34375rem;
+	background: url(../img/game_E_dong.png)no-repeat center;
+	background-size: cover;
+	position: absolute;
+	top: 2.1875rem;
+	left: 50%;
+	margin-left:-3.875rem ;
+}
+.index_container .C_dong{
+	width: 10.59375rem;
+	height: 16rem;
+	background:url(../img/game_C_dong.png)no-repeat center;
+	background-size: cover;
+	position: absolute;
+	top: 5.40625rem;
+	left: 50%;
+	margin-left: -5.296875rem;
+}
+.index_container .startBtn{
+	width: 18.96875rem;
+	height: 3.46875rem;
+	border:1px solid #898989;
+	border-radius: 2.5rem;
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	bottom: 5.0625rem;
+	left: 50%;
+	margin-left: -9.484375rem;
+}
+.index_container .start_word_ce{
+	width: 4.125rem;
+	height: 1.15625rem;
+	background: url(../img/game_start_ce.png)no-repeat center;
+	background-size: cover;
+	position: absolute;
+	left: 50%;
+	bottom: 1.1875rem;
+	margin-left: -2.0625rem;
+}
+.index_container .start_word_chu{
+	width: 5.59375rem;
+	height: 1.21875rem;
+	background: url(../img/game_start_chu.png)no-repeat center;
+	background-size: cover;
+	position: absolute;
+	left: 50%;
+	bottom: 1.1875rem;
+	margin-left: -2.796875rem;
+}
+
+
+
+
+/*ti*/
+
+.ti_container .ti_num{
+	width: 1.40625rem;
+	height: 1.40625rem;
+	border-radius: 50%;
+	font-size: 0.8125rem;
+	color: #fff;
+	text-align: center;
+	line-height: 1.40625rem;
+	float: right;
+	margin-top: 0.5rem;
+	margin-right: 1.3125rem;
+	background: -moz-linear-gradient(bottom,#90231d,#7f4c1e,#6c6b1e);
+			background: -webkit-linear-gradient(bottom,#90231d,#7f4c1e,#6c6b1e);
+			background: -ms-linear-gradient(bottom,#90231d,#7f4c1e,#6c6b1e);
+			background: -o-linear-gradient(bottom,#90231d,#7f4c1e,#6c6b1e);
+			background: linear-gradient(to top,#90231d,#7f4c1e,#6c6b1e);
+}
+.ti_container .ti_banner{
+	width: 21.0625rem;
+	height: 12.96875rem;
+	background: url(../img/game_ti_banner.png)no-repeat center;
+	background-size: cover;
+	margin:0 auto;
+	margin-top: 2.125rem;	
+	overflow: hidden;
+	position: relative;
+
+}
+.ti_container .ti_banner .ti_bannerImg{
+	width: 100%;
+	height: 11.625rem;
+	border-radius: 4px;
+	position: absolute;
+	top: 1.34375rem;
+	left: 0;
+	overflow: hidden;
+}
+.ti_container .ti_banner .ti_bannerImg img{
+	width:100%;
+	height: 100%;
+}
+.ti_container .ti_banner .ti_word{
+	width: 100%;
+	height: 2.40625rem;
+	background-color: rgba(0,0,0,0.5);
+	padding-left: 1.46875rem;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.ti_container .ti_banner .ti_word p{
+	line-height:2.40625rem;
+	color: #fff;
+	font-size: 0.90625rem;
+}
+
+.ti_container .ti_answer{
+	padding:0.65625rem 1.125rem 0;
+}
+.ti_container .ti_answer .ti_answer_n{
+	width:21.1875rem;
+	height: 2.9375rem;
+	margin-top: 0.5625rem;
+	background:url(../img/game_ti_btn.png)no-repeat center;
+	background-size: cover;
+	padding-left: 2rem;
+}
+.ti_container .ti_answer .ti_answer_n p{
+	line-height: 2.9375rem;
+	color: #fff;
+	font-size: 0.9375rem;
+}
+
+
+
+
+
+
+/*score*/
+.score_container,.rightAnswer_container{
+	background: url(../img/game_bg.png) no-repeat center;
+	background-size: cover;
+}
+.score_container .score_banner,.ready_container .ready_banner{
+	width:13.90625rem;
+	height: 2.46875rem;
+	margin: 0 auto;
+	margin-top: 1.21875rem;
+	background: url(../img/game_score_banner.png)no-repeat center;
+	background-size: cover;
+}
+.score_container .score_light{
+	width: 9.1875rem;
+	height: 9.1875rem;
+	background: url(../img/game_score_light.png)no-repeat center;
+	background-size: cover;
+	margin: 0 auto;
+	margin-top: 1.375rem;
+	padding-top: 2.8125rem;
+}
+.score_container .score_light p{
+	font-size: 0.9375rem;
+	color: #f35d1b;
+	text-align: center;
+}
+.score_container .score_light p strong{
+	font-size: 2.5rem;
+}
+.score_container .score_light .score_word{
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 0.5625rem;
+	letter-spacing: 0.2em;
+}
+.score_container .score_btn{
+	width: 21.0625rem;
+	height: 5.21875rem;
+	background: url(../img/game_score_btn.png)no-repeat center;
+	background-size: cover;
+	margin: 0 auto;
+	margin-top: 2.40625rem;
+	text-align: center;
+	padding-top: 1.125rem;
+}
+.score_container .score_btn .score_zhifu{
+	font-size: 0.8125rem;
+	color: #fff;
+	letter-spacing: 0.2em;
+}
+.score_container .score_btn .score_toukan{
+	font-size: 1.125rem;
+	color: #fff;
+	line-height: 2.5rem;
+	letter-spacing: 0.2em;
+}
+.score_container .score_btn .score_chakan{
+	font-size: 1.125rem;
+	color: #fff;
+	line-height: 2.8125rem;
+	letter-spacing: 0.2em;
+}
+.score_container .score_me{
+	height: 3.125rem;
+	line-height: 3.125rem;
+	text-align: center;
+}
+.score_container .score_me a{
+	color: #fff;
+	font-size: 1.125rem;
+}
+.score_container .score_listBox{
+	padding: 0.25rem 1.1875rem 1.625rem;
+}
+.score_container .score_listBox .score_list{
+	width: 100%;
+	border-radius: 7px;
+	background-color: #fff;
+}
+.score_container .score_listBox .score_list .item{
+	padding: 0.875rem 0.875rem 0.9375rem;
+	border-bottom: 1px solid #ccc;
+	}
+.score_container .score_listBox .score_list .item:last-child{
+	border-bottom: 0px solid #ccc;
+}
+
+.score_container .score_listBox .score_list .item .photo{
+	width: 2.4375rem;
+	height: 2.5375rem;
+	background-color: #000;
+	float: left;
+	overflow: hidden;
+}
+.score_container .score_listBox .score_list .item .photo img{
+	width: 100%;
+	height: 100%;
+}
+.score_container .score_listBox .score_list .item .name{
+	padding: 0.3125rem 1.625rem;
+	font-size: 0.8125rem;
+	float: left;
+}
+.score_container .score_listBox .score_list .item .name .name_weChat{
+	color: #404040;
+}
+.score_container .score_listBox .score_list .item .name .name_weChatWrap{
+	color: #787878;
+}
+.score_container .score_listBox .score_list .item .result{
+	float: right;
+	font-size: 0.9375rem;
+	color: #f35d1b;
+	line-height: 2.5375rem;
+}
+
+
+
+
+
+
+/*pay*/
+.pay_container .pay_num{
+	width: 21.0625rem;
+	height: 2.9375rem;
+	background: url(../img/game_pay_num.png)no-repeat center;
+	background-size: cover;
+	margin: 0 auto;
+	margin-top: 1.96875rem;
+	color: #fff;
+	text-align: center;
+	line-height: 2.9375rem;
+}
+.pay_container .pay_weChat,.rightAnswer_container .meTo{
+	width: 21.25rem;
+	height: 2.9375rem;
+	background: url(../img/game_pay_weChat.png)no-repeat center;
+	background-size: cover;
+	margin: 2.875rem auto;
+	color: #fff;
+	text-align: center;
+	line-height: 2.9375rem;
+}
+
+
+
+
+/*rightAnswer*/
+.rightAnswer_container {
+	padding: 0 1.1875rem;
+}
+.rightAnswer_container .title{
+	margin:1.375rem 0 1.0625rem 0;
+	font-size: 0.9375rem;
+	color: #fff;
+}
+.rightAnswer_container ul li{
+	width: 100%;
+	height: 4rem;
+	border-radius: 40px;
+	background-color: #fff;
+	padding: 0.75rem 0 0.75rem 2.5rem;
+	font-size: 0.9375rem;
+	margin-bottom: 0.5rem;
+}
+.rightAnswer_container ul li .ti_title{
+	color: #474747;
+}
+.rightAnswer_container ul li .ti_answer{
+	color: #949494;
+}
+
+
+
+
+
+
+/*ready*/
+.ready_container .ti_banner{
+		width: 21.0625rem;
+	height: 11.03125rem;
+	background: url(../img/game_ready_banner.png)no-repeat center;
+	background-size: cover;
+	margin:0 auto;
+	margin-top: 1.1875rem;	
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+}
+.ready_container .ti_banner .title{
+	font-size: 1.875rem;
+	color: #2f2e2e;
+	margin: 2.625rem 0;
+}
+.ready_container .ti_banner .con{
+	font-size: 0.75rem;
+	color: #2f2e2e;
+}
+
+.ready_container .ready_weChat{
+		width: 21.25rem;
+	height: 2.9375rem;
+	background: url(../img/game_pay_weChat.png) no-repeat center;
+	background-size: cover;
+	margin: 5.3125rem auto;
+	color: #fff;
+	font-size: 0.875rem;
+	text-align: center;
+	line-height: 2.9375rem;
+}

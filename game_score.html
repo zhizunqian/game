@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telphone=no, email=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>game</title>
+	<link rel="stylesheet" href="gameCss/gameCss.css">
+</head>
+<body>
+	<!-- score -->
+	<div class="score_container">
+		<div class="score_banner"></div>
+		<div class="score_light">
+			<p>
+				<strong>20</strong>%
+			</p>
+			<div class="score_word">还是朋友</div>
+		</div>
+		<div class="score_btn" id="pay_look_btn">
+			<p class="score_zhifu">支付1元给XXXX</p>
+			<p class="score_toukan">偷偷看正确回答~^o^~</p>
+		</div>
+		<div class="score_me"><a href="javascript:void(0)" id="MyPlay">我也玩一下！</a></div>
+		<div class="score_listBox">
+			<div class="score_list" id='answered_list'>
+				<!-- <div class="item">
+					<div class="photo"><img src="img/2.jpg" alt=""></div>
+					<div class="name">
+						<p class="name_weChat">我是微信名</p>
+						<p class="name_weChatWrap">我是你的小苹果~~~</p>
+					</div>
+					<div class="result">100%</div>
+					<div class="clear"></div>
+				</div> -->
+			</div>
+		</div>
+	</div>
+
+	<script src="gameJs/zepto.min.js"></script>
+	<script src="gameJs/game.js"></script>
+	<script src="gameJs/game_score.js"></script>
+</body>
+</html>
