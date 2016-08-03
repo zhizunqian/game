@@ -417,7 +417,7 @@ body{
 	height: 100%;
 }
 .score_container .score_listBox .score_list .item .name{
-	padding: 0.3125rem 1.625rem;
+	padding: 0.3125rem 0.9375rem;
 	font-size: 0.8125rem;
 	float: left;
 }
@@ -564,25 +564,25 @@ body{
 	animation-duration: 2s;
  animation-timing-function: linear;
  animation-iteration-count: infinite;
- animation-name: aa;
+ animation-name: bb;
  -webkit-animation-duration: 2s;
  -webkit-animation-timing-function: linear;
  -webkit-animation-iteration-count: infinite;
- -webkit-animation-name: aa;
+ -webkit-animation-name: bb;
  -moz-animation-duration: 2s;
  -moz-animation-timing-function: linear;
  -moz-animation-iteration-count: infinite;
- -moz-animation-name: aa;
+ -moz-animation-name: bb;
  -ms-animation-duration: 2s;
  -ms-animation-timing-function: linear;
  -ms-animation-iteration-count: infinite;
- -ms-animation-name: aa;
+ -ms-animation-name: bb;
  position: absolute;
  top: 0;
  left: 50%;
  margin-left: -2.75rem;
 }
-@keyframes aa{
+@keyframes bb{
 	0%{
 		opacity: 0;
 	}
@@ -600,7 +600,7 @@ body{
 	}
 
 } 
-@-webkit-keyframes aa{
+@-webkit-keyframes bb{
 0%{
 		opacity: 0;
 	}
@@ -617,7 +617,7 @@ body{
 		opacity: 0;
 	}
 }
-@-moz-keyframes aa{
+@-moz-keyframes bb{
 0%{
 		opacity: 0;
 	}
@@ -635,7 +635,7 @@ body{
 	}
 
 }
-@-ms-keyframes aa{
+@-ms-keyframes bb{
 	0%{
 		opacity: 0;
 	}
@@ -715,7 +715,7 @@ body{
 	height: 100%;
 }
 .questioned_container .questioned_listBox .questioned_list .item .name{
-	padding: 0.3125rem 1.625rem;
+	padding: 0.3125rem 0.9375rem;
 	font-size: 0.8125rem;
 	float: left;
 }
