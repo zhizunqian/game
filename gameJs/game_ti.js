@@ -23,7 +23,7 @@ $(function(){
 	var tiNumArr=[];
 
 	
-	$(".ti_container").html('<div class="ti_num">'+tiData[0].ti_num+'</div> <div class="ti_banner"> <div class="ti_bannerImg"><img src="'+tiData[0].ti_img+'" alt=""></div> <div class="ti_word"><p>'+tiData[0].ti_question+'</p></div> </div> <div class="ti_answer"> <div class="ti_answer_n"><p>'+tiData[0].ti_answer_1+'</p></div> <div class="ti_answer_n"><p>'+tiData[0].ti_answer_2+'</p></div> <div class="ti_answer_n"><p>'+tiData[0].ti_answer_3+'</p></div> <div class="ti_answer_n"><p>'+tiData[0].ti_answer_4+'</p></div> </div>');
+	$(".ti_container").html('<div class="ti_num">'+tiData[0].ti_num+'</div> <div class="ti_banner"> <div class="ti_bannerImg"><img src="'+tiData[0].ti_img+'" alt=""><div id="ti_change" class="ti_change"></div></div> <div class="ti_word"><p>'+tiData[0].ti_question+'</p></div> </div> <div class="ti_answer"> <div class="ti_answer_n"><p>'+tiData[0].ti_answer_1+'</p></div> <div class="ti_answer_n"><p>'+tiData[0].ti_answer_2+'</p></div> <div class="ti_answer_n"><p>'+tiData[0].ti_answer_3+'</p></div> <div class="ti_answer_n"><p>'+tiData[0].ti_answer_4+'</p></div> </div>');
 		
 
 	$(".ti_container").delegate(".ti_answer_n","tap",function(){
@@ -34,37 +34,55 @@ $(function(){
 		tiNumArr.push(_tiNum);
 		answerArr.push(_tiAnswer);
 
-		$(this).css({background:'#921f1d'});
+		$(this).css({background:'#fff'});
+		$(this).find('p').css({color:'#000'});
 		
 
-		/*$(this).find('p').animate({color:'#921f1d'},10,function(){
-			$(".ti_container").animate({left:"-200%"},300,function(){
-				$(this).html(" ");
-				_tiNum+=1;
-			})
-		})*/
-		// $(".ti_container").animate({left:'-200%'},600,function(){
-		// 	$(".ti_container").animate({left:'200%'});
-		// })
-
-
 		
+		setTimeout(function(){
+			var _ti_container=$('.ti_container');
+			_ti_container.animate({left:'-100%'},150);
+			setTimeout(function(){
+				_ti_container.html(" ");
+				setTimeout(function(){
+					_ti_container.animate({left:'100%'},10);
+					setTimeout(function(){
+						_ti_container.animate({left:'0%'},150);
+						_tiNum+=1;
+
+						_ti_container_html(_tiNum);
+						
+						if(_tiNum==11){
+							location.href="game_score.html";
+							// location.href="game_ready.html";
+						}
 
 
-
-			// $(".ti_container").html('<div class="ti_num">'+_tiNum+'</div> <div class="ti_banner"> <div class="ti_bannerImg"><img src="'+tiData[_tiNum].ti_img+'" alt=""></div> <div class="ti_word"><p>'+tiData[_tiNum].ti_question+'</p></div> </div> <div class="ti_answer"> <div class="ti_answer_n"><p>'+tiData[_tiNum].ti_answer_1+'</p></div> <div class="ti_answer_n"><p>'+tiData[_tiNum].ti_answer_2+'</p></div> <div class="ti_answer_n"><p>'+tiData[_tiNum].ti_answer_3+'</p></div> <div class="ti_answer_n"><p>'+tiData[_tiNum].ti_answer_4+'</p></div> </div>');
-		function move(){
-			// $(".ti_container").animate({left:'0'});
-		}
-		
-		var t=setTimeout(move,300);
-
-
-		if(_tiNum==11){
-			location.href="game_score.html";
-			// location.href="game_ready.html";
-		}
-
+					},100)
+				},100)
+			},150);
+		},150);
 
 	})
+
+
+	function _ti_container_html(_tiNum){
+		var _ti_container=$('.ti_container');
+		_ti_container.html('<div class="ti_num">'+_tiNum+'</div> <div class="ti_banner"> <div class="ti_bannerImg"><img src="'+tiData[_tiNum].ti_img+'" alt=""><div id="ti_change" class="ti_change"></div></div> <div class="ti_word"><p>'+tiData[_tiNum].ti_question+'</p></div> </div> <div class="ti_answer"> <div class="ti_answer_n"><p>'+tiData[_tiNum].ti_answer_1+'</p></div> <div class="ti_answer_n"><p>'+tiData[_tiNum].ti_answer_2+'</p></div> <div class="ti_answer_n"><p>'+tiData[_tiNum].ti_answer_3+'</p></div> <div class="ti_answer_n"><p>'+tiData[_tiNum].ti_answer_4+'</p></div> </div>');
+	}
+
+	// ti_change
+	// 做字典，下标为键，值为true;-----------------不会写了
+	var ti_dicitory={};
+	$(".ti_container").delegate("#ti_change","tap",function(){
+		var a=Math.floor(Math.random()*10);
+		_tiNum=a;
+
+
+		_ti_container_html(_tiNum);
+		console.log(ti_dicitory);
+	})
+
+
+
 })

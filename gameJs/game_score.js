@@ -35,6 +35,20 @@ $(function(){
 	answeredData.forEach(function(value){
 		$(".score_container .score_list").append('<div class="item"> <div class="photo"><img src="'+value.answer_img+'" alt=""></div> <div class="name"> <p class="name_weChat">'+value.answer_nameWeChat+'</p> <p class="name_weChatWrap">'+value.answer_nameWeChatWrap+'</p> </div> <div class="result">'+value.answer_score+'</div> <div class="clear"></div> </div>')
 	})
-	
+
+
+	// ------------score_num
+	var score_num=Number($('#score_num').html());
+	var score_init=0;
+	var score_num_time=setInterval(function(){
+		score_init+=1;
+		$("#score_num").html(score_init);
+		if(score_init==score_num){
+			clearInterval(score_num_time)
+		}
+	},100)  
+
+
+
 
 })

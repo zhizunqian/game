@@ -32,7 +32,7 @@ body{
 
 
 /*index*/
-.index_container,.ti_container,.score_container,.pay_container,.rightAnswer_container,.ready_container{
+.index_container,.ti_container,.score_container,.pay_container,.rightAnswer_container,.ready_container,.questioned_container{
 	width:100%;
 	min-height: 100%;
 	position: absolute;
@@ -137,6 +137,16 @@ body{
 	width:100%;
 	height: 100%;
 }
+.ti_container .ti_banner .ti_bannerImg .ti_change{
+	width: 4.4375rem;
+	height:5.1875rem;
+	background: url(../img/game_ti_change.png)no-repeat center;
+	background-size: cover;
+	position: absolute;
+	bottom: 1.5625rem;
+	right: 0.5rem;
+	z-index: 2;
+}
 .ti_container .ti_banner .ti_word{
 	width: 100%;
 	height: 2.40625rem;
@@ -162,6 +172,7 @@ body{
 	background:url(../img/game_ti_btn.png)no-repeat center;
 	background-size: cover;
 	padding-left: 2rem;
+	border-radius: 40px;
 }
 .ti_container .ti_answer .ti_answer_n p{
 	line-height: 2.9375rem;
@@ -187,24 +198,145 @@ body{
 	background: url(../img/game_score_banner.png)no-repeat center;
 	background-size: cover;
 }
+.score_container .score_lightBox{
+	width: 9.1875rem;
+	height: 9.1875rem;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 1.375rem;
+	padding-top: 2.8125rem;
+}
 .score_container .score_light{
 	width: 9.1875rem;
 	height: 9.1875rem;
 	background: url(../img/game_score_light.png)no-repeat center;
 	background-size: cover;
-	margin: 0 auto;
-	margin-top: 1.375rem;
-	padding-top: 2.8125rem;
+	animation-duration: 6s;
+ animation-timing-function: linear;
+ animation-iteration-count: infinite;
+ animation-name: aa;
+ animation-delay: 3s;
+ -webkit-animation-duration: 6s;
+ -webkit-animation-timing-function: linear;
+ -webkit-animation-iteration-count: infinite;
+ -webkit-animation-name: aa;
+ -webkit-animation-delay: 3s;
+ -moz-animation-duration: 6s;
+ -moz-animation-timing-function: linear;
+ -moz-animation-iteration-count: infinite;
+ -moz-animation-name: aa;
+ -moz-animation-delay: 3s;
+ -ms-animation-duration: 6s;
+ -ms-animation-timing-function: linear;
+ -ms-animation-iteration-count: infinite;
+ -ms-animation-name: aa;
+ -ms-animation-delay: 3s;
+ position: absolute;
+ top: 0;
+ left: 50%;
+ margin-left: -4.59375rem;
 }
-.score_container .score_light p{
+@keyframes aa{
+	0%{
+		transform:rotate(0deg);
+		-webkit-transform:rotate(0deg);
+	}
+	25%{
+		transform:rotate(90deg);
+		-webkit-transform:rotate(90deg);
+	}
+	50%{
+		transform:rotate(180deg);
+		-webkit-transform:rotate(180deg);
+	}
+	75%{
+		transform:rotate(270deg);
+		-webkit-transform:rotate(270deg);
+	}
+	100%{
+		transform:rotate(360deg);
+		-webkit-transform:rotate(360deg);
+	}
+
+}
+@-webkit-keyframes aa{
+	0%{
+		transform:rotate(0deg);
+		-webkit-transform:rotate(0deg);
+	}
+	25%{
+		transform:rotate(90deg);
+		-webkit-transform:rotate(90deg);
+	}
+	50%{
+		transform:rotate(180deg);
+		-webkit-transform:rotate(180deg);
+	}
+	75%{
+		transform:rotate(270deg);
+		-webkit-transform:rotate(270deg);
+	}
+	100%{
+		transform:rotate(360deg);
+		-webkit-transform:rotate(360deg);
+	}
+
+}
+@-moz-keyframes aa{
+	0%{
+		transform:rotate(0deg);
+		-webkit-transform:rotate(0deg);
+	}
+	25%{
+		transform:rotate(90deg);
+		-webkit-transform:rotate(90deg);
+	}
+	50%{
+		transform:rotate(180deg);
+		-webkit-transform:rotate(180deg);
+	}
+	75%{
+		transform:rotate(270deg);
+		-webkit-transform:rotate(270deg);
+	}
+	100%{
+		transform:rotate(360deg);
+		-webkit-transform:rotate(360deg);
+	}
+
+}
+@-ms-keyframes aa{
+	0%{
+		transform:rotate(0deg);
+		-webkit-transform:rotate(0deg);
+	}
+	25%{
+		transform:rotate(90deg);
+		-webkit-transform:rotate(90deg);
+	}
+	50%{
+		transform:rotate(180deg);
+		-webkit-transform:rotate(180deg);
+	}
+	75%{
+		transform:rotate(270deg);
+		-webkit-transform:rotate(270deg);
+	}
+	100%{
+		transform:rotate(360deg);
+		-webkit-transform:rotate(360deg);
+	}
+
+}
+.score_container .score_lightBox p{
 	font-size: 0.9375rem;
 	color: #f35d1b;
 	text-align: center;
 }
-.score_container .score_light p strong{
+.score_container .score_lightBox p strong{
 	font-size: 2.5rem;
 }
-.score_container .score_light .score_word{
+.score_container .score_lightBox .score_word{
 	width: 100%;
 	text-align: center;
 	color: #fff;
@@ -255,6 +387,16 @@ body{
 	border-radius: 7px;
 	background-color: #fff;
 }
+.score_container .score_listBox .score_list .look{
+	font-size: 0.8125rem;
+	line-height: 1.9375rem;
+	padding: 0.3125rem 0.875rem 0;
+	border-bottom: 1px solid #e8e8e8;
+}
+.score_container .score_listBox .score_list .look p{
+	color: #393939;
+	
+}
 .score_container .score_listBox .score_list .item{
 	padding: 0.875rem 0.875rem 0.9375rem;
 	border-bottom: 1px solid #ccc;
@@ -291,6 +433,7 @@ body{
 	color: #f35d1b;
 	line-height: 2.5375rem;
 }
+
 
 
 
@@ -386,3 +529,206 @@ body{
 	text-align: center;
 	line-height: 2.9375rem;
 }
+
+
+
+
+
+
+
+/*questioned*/
+.questioned_container,.rightAnswer_container{
+	background: url(../img/game_bg.png) no-repeat center;
+	background-size: cover;
+}
+.questioned_container .questioned_banner,.ready_container .ready_banner{
+	width:13.90625rem;
+	height: 2.46875rem;
+	margin: 0 auto;
+	margin-top: 1.21875rem;
+	background: url(../img/game_score_banner.png)no-repeat center;
+	background-size: cover;
+}
+.questioned_container .questioned_lightBox{
+	width: 5.5rem;
+	height:6.5rem;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 2.28125rem;
+}
+.questioned_container .questioned_light{
+	width: 5.5rem;
+	height: 5.5rem;
+	background: url(../img/game_questioned_dian.png)no-repeat center;
+	background-size: cover;
+	animation-duration: 2s;
+ animation-timing-function: linear;
+ animation-iteration-count: infinite;
+ animation-name: aa;
+ -webkit-animation-duration: 2s;
+ -webkit-animation-timing-function: linear;
+ -webkit-animation-iteration-count: infinite;
+ -webkit-animation-name: aa;
+ -moz-animation-duration: 2s;
+ -moz-animation-timing-function: linear;
+ -moz-animation-iteration-count: infinite;
+ -moz-animation-name: aa;
+ -ms-animation-duration: 2s;
+ -ms-animation-timing-function: linear;
+ -ms-animation-iteration-count: infinite;
+ -ms-animation-name: aa;
+ position: absolute;
+ top: 0;
+ left: 50%;
+ margin-left: -2.75rem;
+}
+@keyframes aa{
+	0%{
+		opacity: 0;
+	}
+	25%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 0;
+	}
+	75%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+
+} 
+@-webkit-keyframes aa{
+0%{
+		opacity: 0;
+	}
+	25%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 0;
+	}
+	75%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+@-moz-keyframes aa{
+0%{
+		opacity: 0;
+	}
+	25%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 0;
+	}
+	75%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+
+}
+@-ms-keyframes aa{
+	0%{
+		opacity: 0;
+	}
+	25%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 0;
+	}
+	75%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+
+}
+.questioned_container .questioned_lightBox .questioned_weChat{
+	width: 4.6875rem;
+	height: 4.6875rem;
+	border-radius: 50%;
+	overflow: hidden;
+	position: absolute;
+	top: 0.40625rem;
+	left: 51%;
+	margin-left: -2.34375rem;
+}
+.questioned_container .questioned_lightBox .questioned_weChat img{
+	width: 100%;
+	height: 100%;
+}
+.questioned_container .questioned_lightBox .questioned_word{
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 0.8125rem;
+	line-height: 1rem;
+	position: absolute;
+	bottom: 0;
+}
+.questioned_container .questioned_listBox{
+	margin-top: 4.625rem;
+	padding: 0.25rem 1.1875rem 1.625rem;
+}
+.questioned_container .questioned_listBox .questioned_list{
+	width: 100%;
+	border-radius: 7px;
+	background-color: #fff;
+}
+.questioned_container .questioned_listBox .questioned_list .look{
+	font-size: 0.8125rem;
+	line-height: 1.9375rem;
+	padding: 0.3125rem 0.875rem 0;
+	border-bottom: 1px solid #e8e8e8;
+}
+.questioned_container .questioned_listBox .questioned_list .look p{
+	color: #393939;
+	
+}
+.questioned_container .questioned_listBox .questioned_list .item{
+	padding: 0.875rem 0.875rem 0.9375rem;
+	border-bottom: 1px solid #ccc;
+	}
+.questioned_container .questioned_listBox .questioned_list .item:last-child{
+	border-bottom: 0px solid #ccc;
+}
+
+.questioned_container .questioned_listBox .questioned_list .item .photo{
+	width: 2.4375rem;
+	height: 2.5375rem;
+	background-color: #000;
+	float: left;
+	overflow: hidden;
+}
+.questioned_container .questioned_listBox .questioned_list .item .photo img{
+	width: 100%;
+	height: 100%;
+}
+.questioned_container .questioned_listBox .questioned_list .item .name{
+	padding: 0.3125rem 1.625rem;
+	font-size: 0.8125rem;
+	float: left;
+}
+.questioned_container .questioned_listBox .questioned_list .item .name .name_weChat{
+	color: #404040;
+}
+.questioned_container .questioned_listBox .questioned_list .item .name .name_weChatWrap{
+	color: #787878;
+}
+.questioned_container .questioned_listBox .questioned_list .item .result{
+	float: right;
+	font-size: 0.9375rem;
+	color: #f35d1b;
+	line-height: 2.5375rem;
+}
+
